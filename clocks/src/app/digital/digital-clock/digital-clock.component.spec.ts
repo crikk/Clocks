@@ -48,7 +48,6 @@ describe('DigitalClockComponent', () => {
       expect(component.minutes).not.toBe(0);
       expect(component.seconds).not.toBe(0);
     }))
-
   })
 
   describe("addMinute", () => {
