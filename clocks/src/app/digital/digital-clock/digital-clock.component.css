@@ -3,6 +3,7 @@
   padding: 2rem;
   margin: 2rem;
   width: 435px;
+  border: 5px ridge lightslategrey
 }
 
 .clockface-layout {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ClockSyncService } from 'src/app/clock-sync.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { ClockSyncService } from 'src/app/clock-sync.service';
   templateUrl: './digital-clock.component.html',
   styleUrls: ['./digital-clock.component.css']
 })
-export class DigitalClockComponent implements OnInit {
+export class DigitalClockComponent {
   hours: number;
   minutes: number;
   seconds: number;
@@ -20,9 +20,6 @@ export class DigitalClockComponent implements OnInit {
 
     this.listenForClockUpdates();
     }
-
-  ngOnInit(): void {
-  }
 
   listenForClockUpdates() {
     this.clockService.timeResetEvent.subscribe((date) => {
