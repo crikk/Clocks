@@ -1,3 +1,4 @@
+import { DigitalClockComponent } from './digital/digital-clock/digital-clock.component';
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
@@ -5,7 +6,8 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        DigitalClockComponent
       ],
     }).compileComponents();
   });
@@ -22,10 +24,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('clocks');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('clocks app is running!');
-  });
 });

@@ -1,5 +1,5 @@
 import { TestBed,tick, fakeAsync } from '@angular/core/testing';
-import { ONE_HOUR, ONE_MINUTE } from './clock-sync.service';
+import { ONE_HOUR, ONE_MINUTE, ONE_SECOND } from './clock-sync.service';
 import { ClockSyncService } from './clock-sync.service';
 
 describe('ClockSyncService', () => {
@@ -13,6 +13,21 @@ describe('ClockSyncService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  describe("addSecond", () => {
+    it ("should add a second to the date", () => {
+      let initial = service.getDate().getTime();
+      service.addSecond();
+      let updated = service.getDate().getTime();
+      expect(updated).toEqual(initial + ONE_SECOND);
+    })
+
+    it ("should publish the updated date", () => {
+      spyOn(service, "publish").and.callThrough();
+      service.addMinute();
+      expect(service.publish).toHaveBeenCalled();
+    })
+  })
 
   describe("addMinute", () => {
     it ("should add a minute to the date", () => {
