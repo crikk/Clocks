@@ -1,0 +1,18 @@
+<div class="clock">
+  <div class="clockface-layout">
+    <span class="time hour-position">{{hours | number: '2.0'}}</span>
+    <button class="hour-add-btn-position" (click)="addHour()"><span class="material-icons-outlined">add_circle</span></button>
+    <button class="hour-sub-btn-position" (click)="subtractHour()"><span class="material-icons-outlined">remove_circle</span></button>
+
+    <span class="time min-divider-position">:</span>
+
+    <span class="time minute-position">{{minutes | number: '2.0'}}</span>
+    <button class="min-add-btn-position" (click)="addMinute()"><span class="material-icons-outlined">add_circle</span></button>
+    <button class="min-sub-btn-position"(click)="subtractMinute()"><span class="material-icons-outlined">remove_circle</span></button>
+
+    <span class="time sec-divider-position">:</span>
+
+    <span class="time seconds seconds-position">{{seconds | number: '2.0'}}</span>
+  </div>
+
+</div>

@@ -1,0 +1,105 @@
+.clock {
+  background-color: lightgray;
+  padding: 2rem;
+  margin: 2rem;
+  width: 435px;
+}
+
+.clockface-layout {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 4rem 4rem 2rem 4rem 4rem 2rem 7rem;
+  padding: 0;
+  justify-self: center;
+  text-align: center;
+}
+
+.hour-position {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.minute-position {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.hour-add-btn-position {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.hour-sub-btn-position {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.min-add-btn-position {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.min-sub-btn-position {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.min-divider-position {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+
+.sec-divider-position {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.seconds-position {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: center;
+}
+
+button {
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: none;
+  margin: 1rem 0;
+  cursor: pointer;
+  width:min-content;
+  justify-self: center;
+  color: brown;
+}
+
+button span {
+  font-size: 2rem;
+}
+
+.time {
+  font-family: 'Tourney', cursive;
+  font-size: 4rem;
+  background: black;
+  color: lime;
+  padding: 1rem;
+}
+

@@ -1,6 +1,7 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 
-export const ONE_MINUTE: number = (1000 * 60);
+export const ONE_SECOND: number = (1000);
+export const ONE_MINUTE: number = (ONE_SECOND * 60);
 export const ONE_HOUR: number = (ONE_MINUTE * 60);
 
 
@@ -15,11 +16,18 @@ export class ClockSyncService {
   private _date: Date = new Date();
 
   constructor() {
-    this.publish();
+    setInterval(() => {
+      this.addSecond();
+    }, ONE_SECOND);
   }
 
   getDate(): Date {
     return this._date;
+  }
+
+  addSecond() {
+    this._date.setTime(this._date.getTime() + ONE_SECOND);
+    this.publish();
   }
 
   addMinute() {
